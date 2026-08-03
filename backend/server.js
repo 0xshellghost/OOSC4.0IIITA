@@ -546,9 +546,20 @@ app.post('/api/contact', publicApiLimiter, async (req, res) => {
       const mbvResponse = await fetch(`https://api.mailboxvalidator.com/v1/validation/single?key=${process.env.MAILBOX_VALIDATOR_API_KEY}&email=${encodeURIComponent(email)}`)
       if (mbvResponse.ok) {
         const mbvData = await mbvResponse.json()
-        // If the query was successful and the email is explicitly invalid
-        if (!mbvData.error_code && mbvData.is_verified === "False") {
-          return res.status(400).json({ error: 'Please provide a valid email address.' })
+        if (!mbvData.error_code) {
+          // Reject if the mailbox status is explicitly invalid
+          const status = (mbvData.status || '').toLowerCase()
+          if (status === 'false' || status === 'invalid') {
+            return res.status(400).json({ error: 'This email address does not exist. Please check and try again.' })
+          }
+          // Reject if DNS or SMTP checks fail
+          if (mbvData.is_domain === 'False' || mbvData.is_smtp === 'False') {
+            return res.status(400).json({ error: 'This email domain does not appear to be valid.' })
+          }
+          // Reject disposable/temporary email addresses
+          if (mbvData.is_disposable === 'True') {
+            return res.status(400).json({ error: 'Disposable email addresses are not allowed. Please use a real email.' })
+          }
         }
       }
     } catch (err) {

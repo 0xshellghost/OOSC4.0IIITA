@@ -368,12 +368,7 @@ export default function SponsorsPage({
               </p>
             </div>
 
-            {/* Sponsor Name Tags */}
-            <div className="sponsor-tags">
-              {['Trumio', 'Open Printing', 'Overlayy', 'Qualcomm', 'Google Colaboratory', 'Zephyr', 'Snapcraft'].map((name) => (
-                <span key={name} className="sponsor-tag">{name}</span>
-              ))}
-            </div>
+            
 
 
             {/* Sponsor Logos Grid */}
