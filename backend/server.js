@@ -540,6 +540,23 @@ app.post('/api/contact', publicApiLimiter, async (req, res) => {
     return res.status(400).json({ error: 'Name, email, and message are required.' })
   }
 
+  // Email Validation via MailboxValidator
+  if (process.env.MAILBOX_VALIDATOR_API_KEY) {
+    try {
+      const mbvResponse = await fetch(`https://api.mailboxvalidator.com/v1/validation/single?key=${process.env.MAILBOX_VALIDATOR_API_KEY}&email=${encodeURIComponent(email)}`)
+      if (mbvResponse.ok) {
+        const mbvData = await mbvResponse.json()
+        // If the query was successful and the email is explicitly invalid
+        if (!mbvData.error_code && mbvData.is_verified === "False") {
+          return res.status(400).json({ error: 'Please provide a valid email address.' })
+        }
+      }
+    } catch (err) {
+      console.error('MailboxValidator API error:', err)
+      // Proceed if validation fails network-wise to avoid blocking real messages
+    }
+  }
+
   try {
     // 1. Save to database
     await prisma.contactMessage.create({
