@@ -930,7 +930,7 @@ function App() {
           title="OOSC 4.0 — Back to home"
           aria-label="OOSC 4.0 home"
         >
-          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Open Source Systems Conference logo" className="brand-logo" />
+          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Open Source Systems Conference logo" className="brand-logo" width="140" height="40" />
         </button>
 
         {/* Tablet shortcut nav — visible only at tablet breakpoint */}

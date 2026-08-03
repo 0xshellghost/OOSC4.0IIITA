@@ -19,8 +19,43 @@ export default function SchedulePage({
         <meta property="og:description" content="View the full 3-day schedule for OOSC 4.0. Keynote talks, workshops, panel discussions, and hackathon events." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/schedule" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta property="og:image:alt" content="OOSC 4.0 Schedule" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Schedule — OOSC 4.0 | IIIT Allahabad" />
         <meta name="twitter:description" content="View the full 3-day schedule for OOSC 4.0 at IIIT Allahabad." />
+        <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta name="twitter:image:alt" content="OOSC 4.0 Schedule" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": "OOSC 4.0 Conference Schedule",
+              "description": "Full 3-day schedule for OOSC 4.0 — keynote talks, workshops, panel discussions, and hackathon events at IIIT Allahabad.",
+              "url": "https://oosc.iiita.ac.in/schedule",
+              "startDate": "2026-08-28T09:00:00+05:30",
+              "endDate": "2026-08-30T21:00:00+05:30",
+              "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+              "eventStatus": "https://schema.org/EventScheduled",
+              "location": {
+                "@type": "Place",
+                "name": "IIIT Allahabad",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Prayagraj",
+                  "addressRegion": "Uttar Pradesh",
+                  "addressCountry": "IN"
+                }
+              },
+              "organizer": {
+                "@type": "Organization",
+                "name": "OOSC IIITA Team",
+                "url": "https://oosc.iiita.ac.in"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <div className="section-heading split">
         <div>

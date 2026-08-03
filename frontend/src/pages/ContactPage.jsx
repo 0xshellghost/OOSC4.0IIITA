@@ -14,8 +14,13 @@ export default function ContactPage({ siteConfig, form, setForm, formStatus, han
         <meta property="og:description" content="Get in touch with the OOSC 4.0 organizing team for inquiries, sponsorships, and hackathon registration." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/contact" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta property="og:image:alt" content="OOSC 4.0 Contact" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact — OOSC 4.0 | IIIT Allahabad" />
         <meta name="twitter:description" content="Reach out to the OOSC 4.0 organizing team at IIIT Allahabad." />
+        <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta name="twitter:image:alt" content="OOSC 4.0 Contact" />
         <script type="application/ld+json">
           {`
             {

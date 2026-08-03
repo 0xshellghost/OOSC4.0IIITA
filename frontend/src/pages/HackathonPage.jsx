@@ -44,8 +44,13 @@ export default function HackathonPage({
         <meta property="og:description" content="Participate in the OOSC 4.0 Hackathon. Build the future of open-source systems, compete for ₹1,00,000+ in prizes, and showcase your projects." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/hackathon" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta property="og:image:alt" content="OOSC 4.0 Hackathon" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hackathon — OOSC 4.0 | IIIT Allahabad" />
         <meta name="twitter:description" content="Join the OOSC 4.0 Hackathon. Compete for ₹1,00,000+ in prizes at IIIT Allahabad." />
+        <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta name="twitter:image:alt" content="OOSC 4.0 Hackathon" />
         <script type="application/ld+json">
           {`
             {

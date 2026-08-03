@@ -17,8 +17,13 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
         <meta property="og:description" content="Learn about OOSC 4.0 — the Open Source Systems Conference at IIIT Allahabad. Discover our history, host city, past speakers, and what to expect." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/about" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta property="og:image:alt" content="OOSC 4.0 About" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About — OOSC 4.0 | IIIT Allahabad" />
         <meta name="twitter:description" content="Learn about OOSC 4.0 — the Open Source Systems Conference at IIIT Allahabad. Discover our history, host city, and past speakers." />
+        <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta name="twitter:image:alt" content="OOSC 4.0 About" />
         <script type="application/ld+json">
           {`
             {

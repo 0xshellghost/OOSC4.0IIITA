@@ -48,8 +48,13 @@ export default function SponsorsPage({
         <meta property="og:description" content="View the organizations sponsoring OOSC 4.0. Explore sponsorship tiers and become a partner of India's leading open-source conference." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/sponsors" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta property="og:image:alt" content="OOSC 4.0 Sponsors" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sponsors — OOSC 4.0 | IIIT Allahabad" />
         <meta name="twitter:description" content="View the organizations sponsoring OOSC 4.0 and explore sponsorship tiers." />
+        <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
+        <meta name="twitter:image:alt" content="OOSC 4.0 Sponsors" />
         <script type="application/ld+json">
           {`
             {
@@ -370,32 +375,6 @@ export default function SponsorsPage({
               ))}
             </div>
 
-            {/* Why They Sponsored Card */}
-            <div className="sponsor-why-card">
-              <h3>Why They Sponsored OOSC</h3>
-              <ul>
-                <li>
-                  <span className="sponsor-bullet">•</span>
-                  <p>Direct access to India's largest open-source developer community.</p>
-                </li>
-                <li>
-                  <span className="sponsor-bullet">•</span>
-                  <p>High-quality brand exposure across a technically sophisticated audience.</p>
-                </li>
-                <li>
-                  <span className="sponsor-bullet">•</span>
-                  <p>Opportunity to recruit top talent from premier engineering institutes.</p>
-                </li>
-                <li>
-                  <span className="sponsor-bullet">•</span>
-                  <p>Association with a globally recognized open-source event brand.</p>
-                </li>
-                <li>
-                  <span className="sponsor-bullet">•</span>
-                  <p>Media visibility across traditional and digital channels.</p>
-                </li>
-              </ul>
-            </div>
 
             {/* Sponsor Logos Grid */}
             <div className="sponsor-logos-grid">
@@ -416,49 +395,7 @@ export default function SponsorsPage({
           </div>
         </div>
 
-
-
-
         {/* Section 3 Wrapper */}
-        <div>
-          {/* ── BRANDING & DIGITAL EXPOSURE SECTION ── */}
-          <div className="exposure-section">
-            <div className="exposure-header">
-              <span className="exposure-eyebrow">KEY BENEFITS OF SPONSORING</span>
-              <h2 className="exposure-title">Branding & Digital Exposure</h2>
-            </div>
-
-            <div className="exposure-grid">
-              <article className="exposure-card">
-                <h3>Branding & Recognition</h3>
-                <ul className="exposure-list">
-                  <li>Logo & name on official banners, hoardings, website, and certificates.</li>
-                  <li>Recognition during Opening & Closing Ceremonies and the Networking Dinner.</li>
-                </ul>
-              </article>
-
-              <article className="exposure-card">
-                <h3>Digital Publicity & Media</h3>
-                <ul className="exposure-list">
-                  <li>Showcase across OOSC 4.0 official social media handles (LinkedIn, Instagram, YouTube).</li>
-                  <li>Video promo played before key events and logo placement on virtual backdrops.</li>
-                  <li>Nationwide visibility through traditional media and publicity partners.</li>
-                </ul>
-              </article>
-
-              <article className="exposure-card">
-                <h3>On-Ground Engagement</h3>
-                <ul className="exposure-list">
-                  <li>Stall space at the venue for live product demos and direct audience interaction.</li>
-                  <li>Dedicated session/talk to engage directly with attendees and promote offerings.</li>
-                  <li>Outreach campaigns reaching 150+ colleges, 1,000+ communities, and 500+ participants.</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        {/* Section 4 Wrapper */}
         <div>
           {/* CTA Banner */}
           <div className="partnership-cta">
