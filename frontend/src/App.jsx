@@ -227,7 +227,7 @@ function App() {
   )
   const teamCategories = useMemo(
     () => [
-      'Core Team',
+      'Event and Management',
       'Faculty Coordinators',
       'Student Coordinators',
       'Technical Team',
@@ -273,7 +273,7 @@ function App() {
   // Group team members dynamically by roles
   const categorizedTeam = useMemo(() => {
     const groups = {
-      'Core Team': [],
+      'Event and Management': [],
       'Faculty Coordinators': [],
       'Student Coordinators': [],
       'Technical Team': [],
@@ -331,7 +331,7 @@ function App() {
         role.includes('head') ||
         role.includes('core')
       ) {
-        groups['Core Team'].push(member)
+        groups['Event and Management'].push(member)
       } else {
         groups['Student Coordinators'].push(member)
       }
