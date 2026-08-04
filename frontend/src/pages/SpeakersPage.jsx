@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Mic, Star, ArrowRight } from 'lucide-react'
+import { Mic, Star, ArrowRight, Clock, RotateCcw } from 'lucide-react'
 import './SpeakersPage.css'
+
+// Default proposal submission deadline: 14 Aug 2026, 11:59:59 PM IST
+const DEFAULT_DEADLINE = new Date('2026-08-14T23:59:59+05:30')
 
 export default function SpeakersPage({
   siteConfig, adminMode, speakers,
@@ -9,6 +12,43 @@ export default function SpeakersPage({
   handleDragStart, handleDragOver, handleDragEnd, handleDrop,
   openModal, editRecord, deleteRecord, setSpeakers
 }) {
+  const [targetDate, setTargetDate] = useState(DEFAULT_DEADLINE)
+
+  const getTimeRemaining = (target) => {
+    const total = Math.max(0, Math.floor((target.getTime() - new Date().getTime()) / 1000))
+    return {
+      total,
+      days: Math.floor(total / (3600 * 24)),
+      hours: Math.floor((total % (3600 * 24)) / 3600),
+      minutes: Math.floor((total % 3600) / 60),
+      seconds: total % 60
+    }
+  }
+
+  const [timeLeft, setTimeLeft] = useState(() => getTimeRemaining(DEFAULT_DEADLINE))
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeRemaining(targetDate))
+    }, 1000)
+    return () => clearInterval(timer)
+  }, [targetDate])
+
+  const handleResetTimer = () => {
+    setTargetDate(DEFAULT_DEADLINE)
+    setTimeLeft(getTimeRemaining(DEFAULT_DEADLINE))
+  }
+
+  // Dynamic theme based on remaining days
+  let timerThemeClass = 'timer-theme-default'
+  if (timeLeft.total <= 0) {
+    timerThemeClass = 'timer-theme-expired'
+  } else if (timeLeft.days <= 2) {
+    timerThemeClass = 'timer-theme-orange'
+  } else if (timeLeft.days <= 5) {
+    timerThemeClass = 'timer-theme-yellow'
+  }
+
   return (
     <section className="content-section speakers-section" id="speakers">
       <Helmet>
@@ -69,6 +109,51 @@ export default function SpeakersPage({
         <a href={siteConfig.speakersCtaLink || "https://events.canonical.com/event/154/abstracts/"} target="_blank" rel="noopener noreferrer" className="btn btn-primary cta-btn">
           Submit Proposal <ArrowRight size={18} />
         </a>
+      </div>
+
+      {/* ── Live Proposal Countdown Timer (Centered below banner) ── */}
+      <div className={`speaker-timer-box ${timerThemeClass}`}>
+        <div className="timer-header">
+          <span className="timer-title">
+            <Clock size={16} /> Submission Deadline: 14 Aug, 11:59 PM
+          </span>
+          {adminMode && (
+            <button
+              type="button"
+              className="timer-reset-btn"
+              onClick={handleResetTimer}
+              title="Reset timer to default 14 Aug deadline"
+            >
+              <RotateCcw size={13} /> Reset
+            </button>
+          )}
+        </div>
+
+        {timeLeft.total > 0 ? (
+          <div className="timer-digits-row">
+            <div className="digit-block">
+              <span className="digit-val">{String(timeLeft.days).padStart(2, '0')}</span>
+              <span className="digit-label">Days</span>
+            </div>
+            <span className="digit-colon">:</span>
+            <div className="digit-block">
+              <span className="digit-val">{String(timeLeft.hours).padStart(2, '0')}</span>
+              <span className="digit-label">Hours</span>
+            </div>
+            <span className="digit-colon">:</span>
+            <div className="digit-block">
+              <span className="digit-val">{String(timeLeft.minutes).padStart(2, '0')}</span>
+              <span className="digit-label">Mins</span>
+            </div>
+            <span className="digit-colon">:</span>
+            <div className="digit-block">
+              <span className="digit-val">{String(timeLeft.seconds).padStart(2, '0')}</span>
+              <span className="digit-label">Secs</span>
+            </div>
+          </div>
+        ) : (
+          <p className="timer-expired-text">Proposal submission deadline has passed.</p>
+        )}
       </div>
 
       <div className="card-grid speaker-grid">

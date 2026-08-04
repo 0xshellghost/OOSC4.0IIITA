@@ -53,7 +53,7 @@
   justify-content: space-between;
   gap: 24px;
   margin: 60px auto 20px;
-  padding: 20px;
+  padding: 24px 28px;
   max-width: 1280px;
   border-radius: var(--radius-card);
   position: relative;
@@ -71,6 +71,10 @@
   background: var(--color-accent);
 }
 
+.cta-content {
+  flex: 1 1 600px;
+}
+
 .cta-content h3 {
   font-size: 1.6rem;
   color: var(--color-page-heading);
@@ -81,7 +85,7 @@
   font-size: 1rem;
   color: var(--color-page-subheading);
   margin: 0;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .cta-btn {
@@ -95,7 +99,21 @@
   .speaker-cta-banner {
     flex-direction: column;
     text-align: center;
-    padding: 30px 20px;
+    padding: 24px 20px;
+  }
+
+  .cta-content {
+    flex: 1 1 auto;
+  }
+
+  .cta-content p {
+    max-width: 100%;
+  }
+
+  .cta-btn {
+    align-self: center;
+    justify-content: center;
+    width: auto;
   }
 
   .speaker-cta-banner::before {
@@ -304,4 +322,291 @@
   transform: translateY(-4px);
   border-color: var(--color-accent);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* ──────────────────────────────────────────── */
+/* Live Proposal Countdown Timer                */
+/* ──────────────────────────────────────────── */
+
+.speaker-timer-box {
+  margin: 20px auto 40px auto;
+  padding: 24px 32px;
+  border-radius: 14px;
+  max-width: fit-content;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(14, 165, 233, 0.15);
+  backdrop-filter: blur(8px);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Theme: Default (> 5 days) - Dark mode */
+.speaker-timer-box.timer-theme-default {
+  background: rgba(10, 20, 40, 0.85);
+  box-shadow: 0 4px 24px rgba(14, 165, 233, 0.15), inset 0 1px 0 rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.3);
+}
+.speaker-timer-box.timer-theme-default .digit-block {
+  background: rgba(14, 165, 233, 0.1);
+  border: none !important;
+  color: #f0f9ff;
+}
+.speaker-timer-box.timer-theme-default .digit-label {
+  color: #7dd3fc;
+}
+.speaker-timer-box.timer-theme-default .timer-title {
+  color: #38bdf8;
+}
+.speaker-timer-box.timer-theme-default .digit-colon {
+  color: rgba(56, 189, 248, 0.4);
+}
+
+/* Theme: Yellow (5 days or less) - Dark mode */
+.speaker-timer-box.timer-theme-yellow {
+  background: rgba(20, 18, 8, 0.85);
+  box-shadow: 0 4px 24px rgba(234, 179, 8, 0.15), inset 0 1px 0 rgba(234, 179, 8, 0.1);
+  border-color: rgba(234, 179, 8, 0.3);
+}
+.speaker-timer-box.timer-theme-yellow .digit-block {
+  background: rgba(234, 179, 8, 0.12);
+  border: none !important;
+  color: #fef9c3;
+}
+.speaker-timer-box.timer-theme-yellow .digit-label {
+  color: #fde047;
+}
+.speaker-timer-box.timer-theme-yellow .timer-title {
+  color: #facc15;
+}
+.speaker-timer-box.timer-theme-yellow .digit-colon {
+  color: rgba(250, 204, 21, 0.4);
+}
+
+/* Theme: Orange (2 days or less) - Dark mode */
+.speaker-timer-box.timer-theme-orange {
+  background: rgba(25, 14, 5, 0.85);
+  box-shadow: 0 4px 24px rgba(249, 115, 22, 0.15), inset 0 1px 0 rgba(249, 115, 22, 0.1);
+  border-color: rgba(249, 115, 22, 0.3);
+}
+.speaker-timer-box.timer-theme-orange .digit-block {
+  background: rgba(249, 115, 22, 0.12);
+  border: none !important;
+  color: #fff7ed;
+}
+.speaker-timer-box.timer-theme-orange .digit-label {
+  color: #fdba74;
+}
+.speaker-timer-box.timer-theme-orange .timer-title {
+  color: #fb923c;
+}
+.speaker-timer-box.timer-theme-orange .digit-colon {
+  color: rgba(251, 146, 60, 0.4);
+}
+
+/* Theme: Expired - Dark mode */
+.speaker-timer-box.timer-theme-expired {
+  background: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-color: rgba(100, 116, 139, 0.2);
+}
+.speaker-timer-box.timer-theme-expired .timer-title {
+  color: #64748b;
+}
+
+/* ── Bright mode overrides ── */
+:root[data-theme="bright"] .speaker-timer-box {
+  border-color: rgba(14, 165, 233, 0.18);
+}
+
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-default {
+  background: rgba(240, 249, 255, 0.95);
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-default .digit-block {
+  background: rgba(14, 165, 233, 0.06);
+  color: #0c1829;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-default .digit-label {
+  color: #64748b;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-default .timer-title {
+  color: #0ea5e9;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-default .digit-colon {
+  color: #94a3b8;
+}
+
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow {
+  background: rgba(255, 251, 235, 0.95);
+  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.12);
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow .digit-block {
+  background: rgba(234, 179, 8, 0.1);
+  color: #1c1917;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow .digit-label {
+  color: #78716c;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow .timer-title {
+  color: #ca8a04;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow .digit-colon {
+  color: #d4a017;
+}
+
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-orange {
+  background: rgba(255, 247, 237, 0.95);
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.15);
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-orange .digit-block {
+  background: rgba(249, 115, 22, 0.1);
+  color: #1c1917;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-orange .digit-label {
+  color: #78716c;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-orange .timer-title {
+  color: #ea580c;
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-orange .digit-colon {
+  color: #fb923c;
+}
+
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-expired {
+  background: rgba(241, 245, 249, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: rgba(100, 116, 139, 0.15);
+}
+:root[data-theme="bright"] .speaker-timer-box.timer-theme-expired .timer-title {
+  color: #94a3b8;
+}
+
+:root[data-theme="bright"] .timer-reset-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #475569;
+}
+:root[data-theme="bright"] .timer-reset-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.timer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+.timer-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.timer-reset-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  opacity: 0.8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  margin-left: 6px;
+}
+
+.timer-reset-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.04);
+}
+
+.timer-digits-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.digit-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-align: center;
+  border: none !important;
+}
+
+.digit-val {
+  font-size: 2.4rem;
+  font-weight: 800;
+  font-family: 'Space Grotesk', monospace;
+  line-height: 1.1;
+}
+
+.digit-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+.digit-colon {
+  font-size: 2rem;
+  font-weight: 800;
+  opacity: 0.5;
+}
+
+.timer-expired-text {
+  margin: 6px 0 0 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-align: center;
+}
+
+@media (max-width: 580px) {
+  .speaker-timer-box {
+    padding: 18px 16px;
+  }
+
+  .digit-block {
+    min-width: 52px;
+    padding: 8px 10px;
+  }
+
+  .digit-val {
+    font-size: 1.6rem;
+  }
+
+  .digit-colon {
+    font-size: 1.4rem;
+  }
+
+  .timer-digits-row {
+    gap: 6px;
+  }
 }

@@ -198,6 +198,22 @@ export default function SponsorsPage({
               Download Sponsorship Brochure
             </span>
           </a>
+
+          <button
+            type="button"
+            className="btn btn-outline sponsor-oosc-btn"
+            onClick={() => {
+              document.getElementById('sponsors/form')?.scrollIntoView({ behavior: 'smooth' });
+              setTimeout(() => {
+                document.getElementById('sponsor-name')?.focus();
+              }, 600);
+            }}
+          >
+            <span className="prospectus-download-inner">
+              <Handshake size={20} strokeWidth={2} />
+              SPONSOR OOSC 4.0
+            </span>
+          </button>
         </div>
 
         <div className="contact-us-section">
