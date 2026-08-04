@@ -77,7 +77,7 @@ export default function TeamPage({
                     onDrop={(e) => handleDrop(e, 'team', index, categoryName)}
                   >
                     <div className="image-wrapper team-avatar">
-                      <img src={member.photoURL} alt={member.name} loading="lazy" />
+                      <img src={member.photoURL} alt={`${member.name}, OOSC 4.0 organizing team`} width="200" height="200" loading="lazy" />
                     </div>
                     <div className="card-content">
                       <h3>{member.name}</h3>

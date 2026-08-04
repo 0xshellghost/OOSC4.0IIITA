@@ -121,6 +121,7 @@ export default function HomePage({ hero, about, siteConfig, navigateTo }) {
       <Helmet>
         <title>OOSC 4.0 — Opportunity Open Source Conference | IIIT Allahabad</title>
         <meta name="description" content="Join OOSC 4.0, the Opportunity Open Source Conference at IIIT Allahabad (Aug 28-30, 2026) for expert talks, workshops, and hackathons." />
+        <meta name="keywords" content="OOSC 4.0, Opportunity Open Source Conference, IIIT Allahabad, open source, hackathon, workshops, tech conference India, Prayagraj" />
         <link rel="canonical" href="https://oosc.iiita.ac.in/" />
         <meta property="og:title" content="OOSC 4.0 — Opportunity Open Source Conference | IIIT Allahabad" />
         <meta property="og:description" content="Join OOSC 4.0, the Opportunity Open Source Conference at IIIT Allahabad (Aug 28-30, 2026) for expert talks, workshops, and hackathons." />

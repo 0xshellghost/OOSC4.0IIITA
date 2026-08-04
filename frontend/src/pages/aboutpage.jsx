@@ -12,6 +12,7 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
       <Helmet>
         <title>About — OOSC 4.0 | IIIT Allahabad</title>
         <meta name="description" content="Learn about OOSC 4.0 — the Opportunity Open Source Conference at IIIT Allahabad, Aug 28–30, 2026. Discover our history, host city Prayagraj, past keynote speakers, and what to expect." />
+        <meta name="keywords" content="OOSC 4.0, about, Opportunity Open Source Conference, IIIT Allahabad, Prayagraj, open source history, keynote speakers, conference overview" />
         <link rel="canonical" href="https://oosc.iiita.ac.in/about" />
         <meta property="og:title" content="About — OOSC 4.0 | IIIT Allahabad" />
         <meta property="og:description" content="Learn about OOSC 4.0 — the Opportunity Open Source Conference at IIIT Allahabad. Discover our history, host city, past speakers, and what to expect." />
@@ -50,9 +51,9 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
       {/* Logos and contact row */}
       <div className="about-hero-header-row">
         <div className="about-hero-logos">
-          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC Logo" className="about-logo-oosc" />
+          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="about-logo-oosc" width="160" height="45" />
           <span className="logo-divider">|</span>
-          <img src="/IIIT_logo_transparent.gif" alt="IIITA Logo" className="about-logo-iiita" />
+          <img src="/IIIT_logo_transparent.gif" alt="IIIT Allahabad institute logo" className="about-logo-iiita" width="80" height="80" />
         </div>
         <div className="about-hero-contacts">
           <div className="about-contact-item">
@@ -86,27 +87,27 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
         {/* Expect Grid (6 Cards) */}
         <div className="about-expect-grid">
           <article className="about-expect-card">
-            <h3>Keynote Talks</h3>
+            <h2>Keynote Talks</h2>
             <p>Distinguished speakers from the global open-source ecosystem presenting groundbreaking ideas and innovations.</p>
           </article>
           <article className="about-expect-card">
-            <h3>Panel Discussions</h3>
+            <h2>Panel Discussions</h2>
             <p>In-depth conversations between industry leaders, developers, and community organizers on key open-source topics.</p>
           </article>
           <article className="about-expect-card">
-            <h3>Workshops</h3>
+            <h2>Workshops</h2>
             <p>Hands-on sessions covering tools, frameworks, and best practices for open-source contribution and development.</p>
           </article>
           <article className="about-expect-card">
-            <h3>Hackathon</h3>
+            <h2>Hackathon</h2>
             <p>A competitive event where participants build solutions to real-world open-source challenges under time constraints.</p>
           </article>
           <article className="about-expect-card">
-            <h3>Demos & Showcases</h3>
+            <h2>Demos & Showcases</h2>
             <p>Live demonstrations of open-source projects, tools, and technologies by contributors and organizations.</p>
           </article>
           <article className="about-expect-card">
-            <h3>Networking Sessions</h3>
+            <h2>Networking Sessions</h2>
             <p>Structured and informal networking opportunities including a dedicated networking dinner for attendees.</p>
           </article>
         </div>
@@ -214,13 +215,13 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
           {/* Three side-by-side vertical images */}
           <div className="about-hero-image-grid">
             <div className="about-hero-img-wrapper">
-              <img src="/about-country.png" alt="India" className="about-hero-img" loading="eager" />
+              <img src="/about-country.png" alt="Map of India, host country of OOSC 4.0" className="about-hero-img" width="600" height="400" loading="eager" />
             </div>
             <div className="about-hero-img-wrapper">
-              <img src="/about-city.png" alt="Allahabad" className="about-hero-img" loading="eager" />
+              <img src="/about-city.png" alt="Prayagraj city skyline, venue city for OOSC 4.0" className="about-hero-img" width="600" height="400" loading="eager" />
             </div>
             <div className="about-hero-img-wrapper">
-              <img src="/about-college.png" alt="IIIT Allahabad" className="about-hero-img" loading="eager" />
+              <img src="/about-college.png" alt="IIIT Allahabad campus, venue of OOSC 4.0" className="about-hero-img" width="600" height="400" loading="eager" />
             </div>
           </div>
 
@@ -382,13 +383,13 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
         {/* Speaker Photo Gallery */}
         <div className="about-speakers-photo-gallery">
           <div className="about-speakers-photo-wrapper">
-            <img src="/Till-kampetter.png" alt="Till Kamppeter" className="about-speakers-photo" loading="lazy" />
+            <img src="/Till-kampetter.png" alt="Till Kamppeter, past OOSC keynote speaker" className="about-speakers-photo" width="200" height="200" loading="lazy" />
           </div>
           <div className="about-speakers-photo-wrapper">
-            <img src="/Pierre-clisson.png" alt="Pierre Clisson" className="about-speakers-photo" loading="lazy" />
+            <img src="/Pierre-clisson.png" alt="Pierre Clisson, past OOSC keynote speaker" className="about-speakers-photo" width="200" height="200" loading="lazy" />
           </div>
           <div className="about-speakers-photo-wrapper">
-            <img src="/Aveek-Basu.png" alt="Aveek Basu" className="about-speakers-photo" loading="lazy" />
+            <img src="/Aveek-Basu.png" alt="Aveek Basu, past OOSC keynote speaker" className="about-speakers-photo" width="200" height="200" loading="lazy" />
           </div>
         </div>
       </section>

@@ -39,6 +39,7 @@ export default function HackathonPage({
       <Helmet>
         <title>Hackathon — OOSC 4.0 | IIIT Allahabad</title>
         <meta name="description" content="Participate in the OOSC 4.0 Hackathon at IIIT Allahabad, Aug 28–30, 2026. Build the future of open-source systems, compete for ₹1,00,000+ in prizes, and showcase your projects." />
+        <meta name="keywords" content="OOSC 4.0 hackathon, open source hackathon, IIIT Allahabad hackathon, coding competition, prizes, open source projects, Prayagraj" />
         <link rel="canonical" href="https://oosc.iiita.ac.in/hackathon" />
         <meta property="og:title" content="Hackathon — OOSC 4.0 | IIIT Allahabad" />
         <meta property="og:description" content="Participate in the OOSC 4.0 Hackathon. Build the future of open-source systems, compete for ₹1,00,000+ in prizes, and showcase your projects." />

@@ -82,7 +82,7 @@ export default function SpeakersPage({
             onDrop={(e) => handleDrop(e, 'speakers', index)}
           >
             <div className="image-wrapper">
-              <img src={speaker.photoURL} alt={speaker.name} loading="lazy" />
+              <img src={speaker.photoURL} alt={`${speaker.name}, speaker at OOSC 4.0`} width="200" height="200" loading="lazy" />
             </div>
             <div className="card-content">
               <h3>{speaker.name}</h3>

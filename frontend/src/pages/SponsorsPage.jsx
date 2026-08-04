@@ -116,7 +116,7 @@ export default function SponsorsPage({
                       draggable={false}
                     >
                       <div className="logo-container">
-                        <img src={sponsor.logoURL} alt={sponsor.name} loading="lazy" draggable={false} />
+                        <img src={sponsor.logoURL} alt={`${sponsor.name} — OOSC 4.0 sponsor logo`} width="200" height="100" loading="lazy" draggable={false} />
                       </div>
                       <span className="sponsor-name">{sponsor.name}</span>
                     </a>
@@ -374,16 +374,16 @@ export default function SponsorsPage({
             {/* Sponsor Logos Grid */}
             <div className="sponsor-logos-grid">
               <a href="https://www.trumio.ai" target="_blank" rel="noopener noreferrer" className="sponsor-logo-wrapper">
-                <img src="/Trumio-Logo.png" alt="Trumio" loading="lazy" />
+                <img src="/Trumio-Logo.png" alt="Trumio — OOSC past sponsor logo" width="200" height="100" loading="lazy" />
               </a>
               <a href="https://openprinting.github.io" target="_blank" rel="noopener noreferrer" className="sponsor-logo-wrapper">
-                <img src="/Open-printing-Logo.png" alt="Open Printing" loading="lazy" />
+                <img src="/Open-printing-Logo.png" alt="Open Printing — OOSC past sponsor logo" width="200" height="100" loading="lazy" />
               </a>
               <a href="https://www.qualcomm.com" target="_blank" rel="noopener noreferrer" className="sponsor-logo-wrapper">
-                <img src="/Qualcomm-Logo.png" alt="Qualcomm" loading="lazy" />
+                <img src="/Qualcomm-Logo.png" alt="Qualcomm — OOSC past sponsor logo" width="200" height="100" loading="lazy" />
               </a>
               <a href="https://snapcraft.io" target="_blank" rel="noopener noreferrer" className="sponsor-logo-wrapper">
-                <img src="/Snapcraft-Logo.png" alt="Snapcraft" loading="lazy" />
+                <img src="/Snapcraft-Logo.png" alt="Snapcraft — OOSC past sponsor logo" width="200" height="100" loading="lazy" />
               </a>
 
             </div>
