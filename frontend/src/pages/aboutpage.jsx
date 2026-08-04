@@ -53,9 +53,13 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
         <div className="about-hero-logos">
           <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="about-logo-oosc" width="160" height="45" />
           <span className="logo-divider">|</span>
-          <img src="/IIIT_logo_transparent.gif" alt="IIIT Allahabad institute logo" className="about-logo-iiita" width="80" height="80" />
+          <a href="https://iiita.ac.in" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }} aria-label="IIIT Allahabad">
+            <img src="/IIIT_logo_transparent.gif" alt="IIIT Allahabad institute logo" className="about-logo-iiita" width="80" height="80" />
+          </a>
           <span className="logo-divider">|</span>
-          <img src="/gdglogo" alt="Google Developer Groups logo" className="about-logo-gdg" width="80" height="80" />
+          <a href="https://gdsc.iiita.ac.in" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }} aria-label="GDG Prayagraj">
+            <img src="/gdglogo.png" alt="Google Developer Groups logo" className="about-logo-gdg" width="80" height="80" />
+          </a>
         </div>
         <div className="about-hero-contacts">
           <div className="about-contact-item">

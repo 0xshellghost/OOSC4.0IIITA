@@ -14,9 +14,19 @@ export default function Footer() {
         
         {/* Brand Block */}
         <div className="footer-brand-column">
-          <Link to="/" className="footer-logo" aria-label="OOSC 4.0 home page" onClick={scrollToTop}>
-            <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="footer-logo-img" width="160" height="45" />
-          </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <Link to="/" className="footer-logo" aria-label="OOSC 4.0 home page" onClick={scrollToTop}>
+              <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="footer-logo-img" width="160" height="45" />
+            </Link>
+            <span style={{ color: 'var(--color-text-muted, #94a3b8)', opacity: 0.5, fontSize: '1.2rem', fontWeight: 300 }}>|</span>
+            <a href="https://iiita.ac.in" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }} aria-label="IIIT Allahabad">
+              <img src="/IIIT_logo_transparent.gif" alt="IIIT Allahabad" width="45" height="45" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+            </a>
+            <span style={{ color: 'var(--color-text-muted, #94a3b8)', opacity: 0.5, fontSize: '1.2rem', fontWeight: 300 }}>|</span>
+            <a href="https://gdsc.iiita.ac.in" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }} aria-label="GDG Prayagraj">
+              <img src="/gdglogo.png" alt="GDG" width="45" height="45" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+            </a>
+          </div>
           <p className="footer-tagline">
             Opportunity Open Source Conference. Hosted by the Indian Institute of Information Technology, Allahabad.
           </p>
