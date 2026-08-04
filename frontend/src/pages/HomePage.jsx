@@ -40,13 +40,13 @@ function FlipDigit({ digit }) {
       </div>
 
       {/* Flipping Card Bottom */}
-      <div 
+      <div
         className={`flip-card-animated bottom-flip ${isFlipping ? 'animate-bottom' : ''}`}
         onAnimationEnd={handleAnimationEnd}
       >
         <span className="flip-digit-inner">{current}</span>
       </div>
-      
+
       {/* Divider line in the middle */}
       <div className="flip-divider"></div>
     </div>

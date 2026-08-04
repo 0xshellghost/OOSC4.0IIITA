@@ -1700,22 +1700,27 @@ body::after {
 /* ─── FOOTER ─────────────────────────────────────────────────────────────────── */
 .site-footer {
   margin-top: 48px;
+  margin-bottom: 0;
   padding: 48px;
   background: var(--color-footer-bg);
   color: var(--color-footer-heading);
-  border: 1px solid var(--color-footer-border);
-  border-radius: var(--radius-card);
-  box-shadow: none;
-  text-shadow: none;
-  max-width: 1280px;
-  width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
+  border: none;
+  border-top: 1px solid var(--color-footer-border);
+  border-radius: 0;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  transition: none !important;
+  transform: none !important;
 }
 
 .site-footer:hover {
-  transform: none;
-  box-shadow: none;
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: var(--color-footer-border) !important;
 }
 
 .footer-grid-outer {

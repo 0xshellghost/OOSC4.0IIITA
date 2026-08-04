@@ -721,7 +721,7 @@
 
 .text-highlight {
   font-weight: 700;
-   color: var(    --color-text-on-dark);
+  color: var(--color-text-on-dark);
 }
 
 .text-highlight strong {
@@ -1034,7 +1034,7 @@
   .countdown-divider {
     font-size: clamp(1.4rem, 3.5vw, 1.8rem);
   }
-  
+
   .stat-card-gradient {
     padding: 16px;
 
@@ -1051,7 +1051,8 @@
   .overview-card {
     padding: 12px;
   }
-  .overview-icon{
+
+  .overview-icon {
     margin-bottom: 12px;
   }
 }
