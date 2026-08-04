@@ -153,7 +153,10 @@ export default function HomePage({ hero, about, siteConfig, navigateTo }) {
               )}
             </div>
             <h1>{siteConfig.heroTitle || hero.title}</h1>
-            <p className="hero-subtitle">{siteConfig.heroSubtitle || hero.subtitle}</p>
+            <p className="hero-subtitle">
+              <span style={{ fontSize: '1em' }}>Open Source Systems Conference at </span>
+              <span style={{ fontSize: '1.43em' }}>IIIT Allahabad</span>
+            </p>
             <p className="hero-description">{hero.bannerText}</p>
             <CountdownTimer />
             <div className="hero-actions">

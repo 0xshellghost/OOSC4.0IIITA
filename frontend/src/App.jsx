@@ -1249,7 +1249,15 @@ function App() {
                   {((modalResource === 'sponsors' ? modalData.logoURL : modalData.photoURL) || '').length > 0 && (
                     <div className="modal-preview-box">
                       <span>Preview</span>
-                      <img src={modalResource === 'sponsors' ? modalData.logoURL : modalData.photoURL} alt="Preview" loading="lazy" />
+                      <img
+                        src={modalResource === 'sponsors' ? modalData.logoURL : modalData.photoURL}
+                        alt="Preview"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.onerror = null
+                          e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231e293b'/%3E%3Ccircle cx='50' cy='38' r='20' fill='%2338bdf8' opacity='0.5'/%3E%3Cellipse cx='50' cy='85' rx='32' ry='22' fill='%2338bdf8' opacity='0.3'/%3E%3C/svg%3E"
+                        }}
+                      />
                     </div>
                   )}
                 </div>

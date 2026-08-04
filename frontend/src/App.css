@@ -1,7 +1,7 @@
 /* ─── REFINE BROCHURE DESIGN SYSTEM ───────────────────────────────────── */
 :root {
   --gradient-brand: linear-gradient(135deg, #0EA5E9 0%, #14B8A6 50%, #22C55E 100%);
-  --color-bg: #0B1120;
+  --color-bg: #060A14;
   --color-panel: #151E2E;
   --color-panel-muted: #1A2538;
   --color-panel-inset: #1F2B40;
@@ -115,13 +115,13 @@
   --color-text-sub: var(--color-text-on-panel-sub);
   --color-text-muted: var(--color-text-on-panel-muted);
 
-  --color-header-bg: rgba(11, 17, 32, 0.95);
+  --color-header-bg: rgba(5, 8, 16, 0.97);
   --color-header-border: rgba(255, 255, 255, 0.06);
   --color-header-glow-strong: rgba(14, 165, 233, 0.12);
   --color-header-glow-mid: rgba(14, 165, 233, 0.04);
   --color-header-glow-soft: rgba(14, 165, 233, 0.01);
 
-  --color-footer-bg: #080C18;
+  --color-footer-bg: #040710;
   --color-footer-border: rgba(255, 255, 255, 0.06);
   --color-footer-heading: #E8EDF4;
   --color-footer-link: #8B9CB5;
