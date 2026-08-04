@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState, lazy, Suspense } from 'react'
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
+import { Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
 import Footer from './components/Footer.jsx'
 import ImageUploader from './components/ImageUploader.jsx'
@@ -162,15 +162,15 @@ function App() {
   const currentPage = location.pathname === '/' ? 'home' : location.pathname.substring(1)
 
   const pageRoutes = useMemo(() => [
-    { key: 'home', label: 'Home' },
-    { key: 'about', label: 'About' },
-    { key: 'hackathon', label: 'Hackathon' },
-    { key: 'schedule', label: 'Schedule' },
-    { key: 'speakers', label: 'Speakers' },
-    { key: 'sponsors', label: 'Sponsors' },
-    { key: 'team', label: 'Team' },
-    { key: 'register', label: 'Register' },
-    { key: 'contact', label: 'Contact' },
+    { key: 'home', path: '/', label: 'Home' },
+    { key: 'about', path: '/about', label: 'About' },
+    { key: 'hackathon', path: '/hackathon', label: 'Hackathon' },
+    { key: 'schedule', path: '/schedule', label: 'Schedule' },
+    { key: 'speakers', path: '/speakers', label: 'Speakers' },
+    { key: 'sponsors', path: '/sponsors', label: 'Sponsors' },
+    { key: 'team', path: '/team', label: 'Team' },
+    { key: 'register', path: '/register', label: 'Register' },
+    { key: 'contact', path: '/contact', label: 'Contact' },
   ], [])
 
   const navigateTo = (pageKey) => {
@@ -923,49 +923,49 @@ function App() {
         onPointerEnter={handleNavbarPointerEnter}
         onPointerLeave={handleNavbarPointerLeave}
       >
-        <button
-          type="button"
+        <Link
+          to="/"
           className="brand"
-          onClick={() => navigateTo('home')}
           title="OOSC 4.0 — Back to home"
           aria-label="OOSC 4.0 home"
+          onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
         >
-          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Open Source Systems Conference logo" className="brand-logo" width="140" height="40" />
-        </button>
+          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="brand-logo" width="140" height="40" />
+        </Link>
 
         {/* Tablet shortcut nav — visible only at tablet breakpoint */}
         <nav className="nav-shortcuts" aria-label="Quick navigation">
           {[
-            { key: 'home', label: 'Home' },
-            { key: 'about', label: 'About' },
-            { key: 'schedule', label: 'Schedule' },
-            { key: 'speakers', label: 'Speakers' },
-            { key: 'sponsors', label: 'Sponsors' },
-            { key: 'register', label: 'Register' },
-            { key: 'contact', label: 'Contact' },
+            { key: 'home', path: '/', label: 'Home' },
+            { key: 'about', path: '/about', label: 'About' },
+            { key: 'schedule', path: '/schedule', label: 'Schedule' },
+            { key: 'speakers', path: '/speakers', label: 'Speakers' },
+            { key: 'sponsors', path: '/sponsors', label: 'Sponsors' },
+            { key: 'register', path: '/register', label: 'Register' },
+            { key: 'contact', path: '/contact', label: 'Contact' },
           ].map((route) => (
-            <button
+            <Link
               key={route.key}
-              type="button"
+              to={route.path}
               className={route.key === currentPage ? 'nav-link active' : 'nav-link'}
-              onClick={() => navigateTo(route.key)}
+              onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             >
               {route.label}
-            </button>
+            </Link>
           ))}
         </nav>
 
         {/* Full nav — inline on desktop, dropdown on tablet & mobile */}
         <nav className={`main-nav ${mobileMenuOpen ? 'mobile-open' : ''}`} aria-label="Primary navigation">
           {pageRoutes.map((route) => (
-            <button
+            <Link
               key={route.key}
-              type="button"
+              to={route.path}
               className={route.key === currentPage ? 'nav-link active' : 'nav-link'}
-              onClick={() => navigateTo(route.key)}
+              onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             >
               {route.label}
-            </button>
+            </Link>
           ))}
           <div className="mobile-actions-divider"></div>
           <a

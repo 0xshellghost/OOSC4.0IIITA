@@ -119,22 +119,23 @@ export default function HomePage({ hero, about, siteConfig, navigateTo }) {
   return (
     <>
       <Helmet>
-        <title>OOSC 4.0 — Open Source Systems Conference | IIIT Allahabad</title>
-        <meta name="description" content="OOSC 4.0 is a premier Open Source Systems Conference at IIIT Allahabad, Aug 28–30, 2026. Join workshops, expert talks, hackathons, and networking with the open-source community." />
+        <title>OOSC 4.0 — Opportunity Open Source Conference</title>
+        <meta name="description" content="Join OOSC 4.0, the Opportunity Open Source Conference at IIIT Allahabad (Aug 28-30, 2026) for expert talks, workshops, and hackathons." />
+        <meta name="keywords" content="OOSC 4.0, Opportunity Open Source Conference, IIIT Allahabad, open source, hackathon, workshops, tech conference India, Prayagraj" />
         <link rel="canonical" href="https://oosc.iiita.ac.in/" />
-        <meta property="og:title" content="OOSC 4.0 — Open Source Systems Conference | IIIT Allahabad" />
-        <meta property="og:description" content="OOSC 4.0 is a premier Open Source Systems Conference at IIIT Allahabad, Aug 28–30, 2026. Join workshops, expert talks, hackathons, and networking with the open-source community." />
+        <meta property="og:title" content="OOSC 4.0 — Opportunity Open Source Conference" />
+        <meta property="og:description" content="Join OOSC 4.0, the Opportunity Open Source Conference at IIIT Allahabad (Aug 28-30, 2026) for expert talks, workshops, and hackathons." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="OOSC 4.0 Open Source Systems Conference logo" />
+        <meta property="og:image:alt" content="OOSC 4.0 Opportunity Open Source Conference logo" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="OOSC 4.0 — Open Source Systems Conference | IIIT Allahabad" />
-        <meta name="twitter:description" content="OOSC 4.0 is a premier Open Source Systems Conference at IIIT Allahabad, Aug 28–30, 2026. Join workshops, expert talks, hackathons, and networking." />
+        <meta name="twitter:title" content="OOSC 4.0 — Opportunity Open Source Conference | IIIT Allahabad" />
+        <meta name="twitter:description" content="Join OOSC 4.0, the Opportunity Open Source Conference at IIIT Allahabad (Aug 28-30, 2026) for expert talks, workshops, and hackathons." />
         <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
-        <meta name="twitter:image:alt" content="OOSC 4.0 Open Source Systems Conference logo" />
+        <meta name="twitter:image:alt" content="OOSC 4.0 Opportunity Open Source Conference logo" />
       </Helmet>
       {/* Hero Section */}
       <section className="hero-section" id="home">

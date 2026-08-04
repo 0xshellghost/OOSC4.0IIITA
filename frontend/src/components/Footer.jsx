@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Brand Block */}
         <div className="footer-brand-column">
           <Link to="/" className="footer-logo" aria-label="OOSC 4.0 home page" onClick={scrollToTop}>
-            <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Open Source Systems Conference logo" className="footer-logo-img" width="160" height="45" />
+            <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="footer-logo-img" width="160" height="45" />
           </Link>
           <p className="footer-tagline">
             Opportunity Open Source Conference. Hosted by the Indian Institute of Information Technology, Allahabad.

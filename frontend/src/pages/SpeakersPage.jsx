@@ -14,6 +14,7 @@ export default function SpeakersPage({
       <Helmet>
         <title>Speakers — OOSC 4.0 | IIIT Allahabad</title>
         <meta name="description" content="Meet the industry experts, leading open-source maintainers, and researchers speaking at OOSC 4.0 at IIIT Allahabad, Aug 28–30, 2026." />
+        <meta name="keywords" content="OOSC 4.0 speakers, open source experts, keynote speakers, tech talks, IIIT Allahabad, conference speakers" />
         <link rel="canonical" href="https://oosc.iiita.ac.in/speakers" />
         <meta property="og:title" content="Speakers — OOSC 4.0 | IIIT Allahabad" />
         <meta property="og:description" content="Meet the industry experts, leading open-source maintainers, and researchers speaking at OOSC 4.0 at IIIT Allahabad." />
@@ -32,17 +33,17 @@ export default function SpeakersPage({
               "@context": "https://schema.org",
               "@type": "ItemList",
               "itemListElement": ${JSON.stringify(speakers.map((speaker, index) => ({
-                "@type": "ListItem",
-                "position": index + 1,
-                "item": {
-                  "@type": "Person",
-                  "name": speaker.name,
-                  "jobTitle": speaker.title || undefined,
-                  "description": speaker.bio || undefined,
-                  "image": speaker.photoURL || undefined,
-                  "sameAs": [speaker.linkedin, speaker.github].filter(Boolean)
-                }
-              })))}
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "Person",
+              "name": speaker.name,
+              "jobTitle": speaker.title || undefined,
+              "description": speaker.bio || undefined,
+              "image": speaker.photoURL || undefined,
+              "sameAs": [speaker.linkedin, speaker.github].filter(Boolean)
+            }
+          })))}
             }
           `}
         </script>

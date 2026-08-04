@@ -192,6 +192,11 @@
   object-fit: contain;
 }
 
+.about-logo-gdg {
+  height: 48px;
+  object-fit: contain;
+}
+
 .about-hero-contacts {
   display: flex;
   align-items: center;
@@ -609,7 +614,7 @@
 .about-sponsor-tag {
   display: inline-block;
   padding: 0.5rem 1.25rem;
-    font-size: 0.85rem;
+  font-size: 0.85rem;
   color: var(--color-accent);
   border: 1.5px solid var(--color-accent);
   border-radius: 100px;
@@ -871,7 +876,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-bottom:0.8rem;
+    padding-bottom: 0.8rem;
   }
 
   .about-hero-contacts {
@@ -901,7 +906,9 @@
     width: 100%;
   }
 
-  .about-speaker-card,.about-audience-card,.about-expect-card {
+  .about-speaker-card,
+  .about-audience-card,
+  .about-expect-card {
     padding: 1.5rem;
   }
 
@@ -953,19 +960,26 @@
   .about-hero-title {
     font-size: 1.8rem;
   }
+
   .about-section-title {
     font-size: 1.5rem;
   }
+
   .about-speakers-photo-gallery {
     width: 100%;
   }
+
   .about-hero-contacts {
     align-items: flex-start;
   }
+
   .about-hero-logos {
     gap: 0.75rem;
   }
-  .about-logo-oosc, .about-logo-iiita {
+
+  .about-logo-oosc,
+  .about-logo-iiita,
+  .about-logo-gdg {
     height: 36px;
   }
 }
