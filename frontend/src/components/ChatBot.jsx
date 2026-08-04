@@ -64,7 +64,7 @@ const knowledgeBase = [
   {
     id: 'team',
     intents: ['who organized this', 'who made this', 'who built this', 'who is behind this', 'who runs this', 'who created this', 'who developed this', 'who are the organizers', 'tell me about the team', 'who made this website'],
-    phrases: ['organizing committee', 'core team', 'organizing team', 'event organizers', 'made this website', 'built this website', 'created this website', 'developed this website'],
+    phrases: ['organizing committee', 'Technical Team', 'organizing team', 'event organizers', 'made this website', 'built this website', 'created this website', 'developed this website'],
     words: ['organizers', 'organizer', 'committee', 'volunteers'],
     answer: `👥 OOSC'26 is organized by the student and faculty community of **IIIT Allahabad**. Meet our team on the Team page!`,
     nav: { label: 'Meet the Team', route: 'team' },

@@ -227,7 +227,7 @@ function App() {
   )
   const teamCategories = useMemo(
     () => [
-      'Core Team',
+      'Event and Management',
       'Faculty Coordinators',
       'Student Coordinators',
       'Technical Team',
@@ -273,7 +273,7 @@ function App() {
   // Group team members dynamically by roles
   const categorizedTeam = useMemo(() => {
     const groups = {
-      'Core Team': [],
+      'Event and Management': [],
       'Faculty Coordinators': [],
       'Student Coordinators': [],
       'Technical Team': [],
@@ -331,7 +331,7 @@ function App() {
         role.includes('head') ||
         role.includes('core')
       ) {
-        groups['Core Team'].push(member)
+        groups['Event and Management'].push(member)
       } else {
         groups['Student Coordinators'].push(member)
       }
@@ -923,15 +923,25 @@ function App() {
         onPointerEnter={handleNavbarPointerEnter}
         onPointerLeave={handleNavbarPointerLeave}
       >
-        <Link
-          to="/"
-          className="brand"
-          title="OOSC 4.0 — Back to home"
-          aria-label="OOSC 4.0 home"
-          onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-        >
-          <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="brand-logo" width="140" height="40" />
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <Link
+            to="/"
+            className="brand"
+            title="OOSC 4.0 — Back to home"
+            aria-label="OOSC 4.0 home"
+            onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
+          >
+            <img src="/OOSC_LOGO_COMPLETE.svg" alt="OOSC 4.0 Opportunity Open Source Conference logo" className="brand-logo" width="140" height="40" />
+          </Link>
+          <span style={{ color: 'var(--color-text-muted, #94a3b8)', opacity: 0.5, fontSize: '1.2rem', fontWeight: 300 }}>|</span>
+          <a href="https://iiita.ac.in" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }} aria-label="IIIT Allahabad">
+            <img src="/IIIT_logo_transparent.gif" alt="IIIT Allahabad" width="40" height="40" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
+          </a>
+          <span style={{ color: 'var(--color-text-muted, #94a3b8)', opacity: 0.5, fontSize: '1.2rem', fontWeight: 300 }}>|</span>
+          <a href="https://gdsc.iiita.ac.in" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }} aria-label="GDG Prayagraj">
+            <img src="/gdglogo.png" alt="GDG" width="40" height="40" style={{ height: '32px', width: 'auto', objectFit: 'contain' }} />
+          </a>
+        </div>
 
         {/* Tablet shortcut nav — visible only at tablet breakpoint */}
         <nav className="nav-shortcuts" aria-label="Quick navigation">
