@@ -10,7 +10,7 @@ const knowledgeBase = [
     intents: ['what is oosc', 'what is this conference', 'what is this event', 'tell me about oosc', 'about this event'],
     phrases: ['about oosc', 'about the conference', 'about event', 'oosc 4.0', 'open source conference'],
     words: [],
-    answer: `**OOSC'26** is the annual *Open Source Systems Conference* at **IIIT ALLAHABAD**. It brings together researchers, developers, students, and industry leaders to explore distributed systems, cloud-native platforms, open source tooling, and collaborative innovation.`,
+    answer: `**OOSC'26** is the annual *Opportunity Open Source Conference* at **IIIT ALLAHABAD**. It brings together researchers, developers, students, and industry leaders to explore distributed systems, cloud-native platforms, open source tooling, and collaborative innovation.`,
     nav: { label: 'Visit Home Page', route: 'home' },
   },
   {

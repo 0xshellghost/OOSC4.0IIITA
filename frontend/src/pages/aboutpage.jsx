@@ -11,17 +11,17 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
     <div className="about-page-container">
       <Helmet>
         <title>About — OOSC 4.0 | IIIT Allahabad</title>
-        <meta name="description" content="Learn about OOSC 4.0 — the Open Source Systems Conference at IIIT Allahabad, Aug 28–30, 2026. Discover our history, host city Prayagraj, past keynote speakers, and what to expect." />
+        <meta name="description" content="Learn about OOSC 4.0 — the Opportunity Open Source Conference at IIIT Allahabad, Aug 28–30, 2026. Discover our history, host city Prayagraj, past keynote speakers, and what to expect." />
         <link rel="canonical" href="https://oosc.iiita.ac.in/about" />
         <meta property="og:title" content="About — OOSC 4.0 | IIIT Allahabad" />
-        <meta property="og:description" content="Learn about OOSC 4.0 — the Open Source Systems Conference at IIIT Allahabad. Discover our history, host city, past speakers, and what to expect." />
+        <meta property="og:description" content="Learn about OOSC 4.0 — the Opportunity Open Source Conference at IIIT Allahabad. Discover our history, host city, past speakers, and what to expect." />
         <meta property="og:url" content="https://oosc.iiita.ac.in/about" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
         <meta property="og:image:alt" content="OOSC 4.0 About" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About — OOSC 4.0 | IIIT Allahabad" />
-        <meta name="twitter:description" content="Learn about OOSC 4.0 — the Open Source Systems Conference at IIIT Allahabad. Discover our history, host city, and past speakers." />
+        <meta name="twitter:description" content="Learn about OOSC 4.0 — the Opportunity Open Source Conference at IIIT Allahabad. Discover our history, host city, and past speakers." />
         <meta name="twitter:image" content="https://oosc.iiita.ac.in/OOSC_logo.png" />
         <meta name="twitter:image:alt" content="OOSC 4.0 About" />
         <script type="application/ld+json">
@@ -34,7 +34,7 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
                 "@id": "https://oosc.iiita.ac.in/about"
               },
               "name": "About — OOSC 4.0 | IIIT Allahabad",
-              "description": "Learn about OOSC 4.0 — the Open Source Systems Conference at IIIT Allahabad, Aug 28–30, 2026. Discover our history, host city Prayagraj, past keynote speakers, and what to expect.",
+              "description": "Learn about OOSC 4.0 — the Opportunity Open Source Conference at IIIT Allahabad, Aug 28–30, 2026. Discover our history, host city Prayagraj, past keynote speakers, and what to expect.",
               "publisher": {
                 "@type": "Organization",
                 "name": "OOSC IIITA Team",

@@ -1,6 +1,6 @@
 export const heroData = {
   title: 'OOSC 4.0',
-  subtitle: 'Open Source Systems Conference at IIITA',
+  subtitle: 'Opportunity Open Source Conference at IIITA',
   dates: 'Aug 28–30, 2026',
   venue: 'Indian Institute of Information Technology, Allahabad',
   cta: 'Register Interest',

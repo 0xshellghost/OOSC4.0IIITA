@@ -7,7 +7,7 @@ export default function TermsOfUsePage() {
     <section className="content-section policy-section">
       <Helmet>
         <title>Terms of Use — OOSC 4.0 | IIIT Allahabad</title>
-        <meta name="description" content="Read the terms of use for the OOSC 4.0 Open Source Systems Conference website at IIIT Allahabad." />
+        <meta name="description" content="Read the terms of use for the OOSC 4.0 Opportunity Open Source Conference website at IIIT Allahabad." />
         <link rel="canonical" href="https://oosc.iiita.ac.in/terms" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
