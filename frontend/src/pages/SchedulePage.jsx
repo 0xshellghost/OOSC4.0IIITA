@@ -14,6 +14,7 @@ export default function SchedulePage({
       <Helmet>
         <title>Schedule — OOSC 4.0 | IIIT Allahabad</title>
         <meta name="description" content="View the full 3-day schedule for OOSC 4.0 at IIIT Allahabad, Aug 28–30, 2026. Keynote talks, workshops, panel discussions, and hackathon events." />
+        <meta name="keywords" content="OOSC 4.0 schedule, conference agenda, keynote schedule, workshop timetable, IIIT Allahabad, hackathon schedule" />
         <link rel="canonical" href="https://oosc.iiita.ac.in/schedule" />
         <meta property="og:title" content="Schedule — OOSC 4.0 | IIIT Allahabad" />
         <meta property="og:description" content="View the full 3-day schedule for OOSC 4.0. Keynote talks, workshops, panel discussions, and hackathon events." />
