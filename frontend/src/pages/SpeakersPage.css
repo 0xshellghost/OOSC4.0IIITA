@@ -341,7 +341,7 @@
   text-align: center;
   border: 1px solid rgba(14, 165, 233, 0.15);
   backdrop-filter: blur(8px);
-  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 /* Theme: Default (> 5 days) - Dark mode */
@@ -425,6 +425,7 @@
 :root[data-theme="bright"] .speaker-timer-box.timer-theme-default {
   background: rgba(240, 249, 255, 0.95);
   box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
+  border-color: rgba(14, 165, 233, 0.25);
 }
 :root[data-theme="bright"] .speaker-timer-box.timer-theme-default .digit-block {
   background: rgba(14, 165, 233, 0.06);
@@ -443,6 +444,7 @@
 :root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow {
   background: rgba(255, 251, 235, 0.95);
   box-shadow: 0 4px 20px rgba(234, 179, 8, 0.12);
+  border-color: rgba(234, 179, 8, 0.3);
 }
 :root[data-theme="bright"] .speaker-timer-box.timer-theme-yellow .digit-block {
   background: rgba(234, 179, 8, 0.1);
@@ -461,6 +463,7 @@
 :root[data-theme="bright"] .speaker-timer-box.timer-theme-orange {
   background: rgba(255, 247, 237, 0.95);
   box-shadow: 0 4px 20px rgba(249, 115, 22, 0.15);
+  border-color: rgba(249, 115, 22, 0.3);
 }
 :root[data-theme="bright"] .speaker-timer-box.timer-theme-orange .digit-block {
   background: rgba(249, 115, 22, 0.1);
