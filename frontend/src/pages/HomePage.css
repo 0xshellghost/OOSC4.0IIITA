@@ -981,15 +981,28 @@
   }
 
   .hero-host-partner-badge {
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 6px 14px;
-    border-radius: 16px;
-    font-size: 0.82rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border-radius: 100px;
   }
 
   .hero-partner-chip {
-    font-size: 0.82rem;
+    font-size: 0.65rem;
+    gap: 4px;
+  }
+
+  .hero-chip-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .hero-chip-divider {
+    display: inline;
+    font-size: 0.65rem;
+    margin: 0 2px;
   }
 
   .eyebrow-wrapper {
