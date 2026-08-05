@@ -181,6 +181,23 @@ function App() {
     }
   }
 
+  const apiFetch = useCallback(async (path, options = {}) => {
+    const headers = { ...(options.headers || {}) }
+    const baseUrl = import.meta.env.VITE_API_URL || ''
+
+    const response = await fetch(`${baseUrl}${path}`, {
+      ...options,
+      credentials: 'include',
+      headers,
+    })
+
+    const data = await response.json().catch(() => null)
+    if (!response.ok) {
+      throw new Error(data?.error || response.statusText || 'Request failed')
+    }
+    return data
+  }, [])
+
   useEffect(() => {
     const restoreSession = async () => {
       try {
@@ -209,7 +226,7 @@ function App() {
       }
     }
     fetchConfig()
-  }, [])
+  }, [apiFetch])
 
 
 
@@ -340,22 +357,6 @@ function App() {
     return groups
   }, [team])
 
-  const apiFetch = useCallback(async (path, options = {}) => {
-    const headers = { ...(options.headers || {}) }
-    const baseUrl = import.meta.env.VITE_API_URL || ''
-
-    const response = await fetch(`${baseUrl}${path}`, {
-      ...options,
-      credentials: 'include',
-      headers,
-    })
-
-    const data = await response.json().catch(() => null)
-    if (!response.ok) {
-      throw new Error(data?.error || response.statusText || 'Request failed')
-    }
-    return data
-  }, [])
 
   const updateResourceState = (resource, updater) => {
     const applyUpdate = (prev) => {
