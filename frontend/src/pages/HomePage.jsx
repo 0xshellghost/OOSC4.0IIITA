@@ -142,6 +142,19 @@ export default function HomePage({ hero, about, siteConfig, navigateTo }) {
         <div className="hero-glow-blob"></div>
         <div className="hero-content-outer">
           <div className="hero-copy">
+            {/* Host Institute & Organizer Branding Badges */}
+            <div className="hero-host-partner-badge">
+              <a href="https://iiita.ac.in" target="_blank" rel="noopener noreferrer" className="hero-partner-chip" title="IIIT Allahabad — Host Institute">
+                <img src="/IIIT_logo_transparent.gif" alt="IIIT Allahabad logo" className="hero-chip-icon" width="24" height="24" />
+                <span>Hosted by <strong>IIIT Allahabad</strong></span>
+              </a>
+              <span className="hero-chip-divider">•</span>
+              <a href="https://gdsc.iiita.ac.in" target="_blank" rel="noopener noreferrer" className="hero-partner-chip" title="GDG On Campus IIITA — Community Partner">
+                <img src="/gdglogo.png" alt="GDG logo" className="hero-chip-icon" width="24" height="24" />
+                <span>Organized with <strong>GDG IIITA</strong></span>
+              </a>
+            </div>
+
             <div className="eyebrow-wrapper">
               {siteConfig.heroEyebrow ? (
                 <span className="eyebrow-accent">{siteConfig.heroEyebrow}</span>
@@ -155,8 +168,10 @@ export default function HomePage({ hero, about, siteConfig, navigateTo }) {
             </div>
             <h1>{siteConfig.heroTitle || hero.title}</h1>
             <p className="hero-subtitle">
-              <span style={{ fontSize: '1em' }}>Open Source Systems Conference at </span>
-              <span style={{ fontSize: '1.43em' }}>IIIT Allahabad</span>
+              <span>Opportunity Open Source Conference hosted at </span>
+              <strong className="hero-location-highlight">IIIT Allahabad</strong>
+              <span> in collaboration with </span>
+              <strong className="hero-gdg-highlight">GDG On Campus IIITA</strong>
             </p>
             <p className="hero-description">{hero.bannerText}</p>
             <CountdownTimer />

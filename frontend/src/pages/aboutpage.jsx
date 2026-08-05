@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Check, Globe, Mail, MapPin, Calendar, Cpu, Users, Code, Award, BookOpen, Compass, ArrowRight } from 'lucide-react'
+import { Check, Globe, Mail, MapPin, Calendar, Cpu, Users, Code, Award, BookOpen, Compass, ArrowRight, GraduationCap, FlaskConical, GitBranch, Rocket, Handshake, Sparkles } from 'lucide-react'
 import './aboutpage.css'
 
 export default function AboutPage({ siteConfig = {}, about = {} }) {
@@ -248,8 +248,171 @@ export default function AboutPage({ siteConfig = {}, about = {} }) {
         </div>
       </section>
 
+      {/* ─── SECTION: IIIT ALLAHABAD — THE HOST INSTITUTE ────────────────────────── */}
+      <section className="about-institute-section" id="host-institute">
+        <div className="about-eyebrow" style={{ marginTop: '1.5rem' }}>The Host Institute</div>
+        <h2 className="about-section-title">IIIT Allahabad</h2>
 
+        <div className="about-institute-intro">
+          <div className="about-institute-text">
+            <p className="about-section-desc">
+              Indian Institute of Information Technology, Allahabad (IIITA) is one of India's foremost
+              institutes for information technology, computer science, and electronics engineering.
+              Established in 1999 as a centre of excellence in IT, IIITA has grown into a nationally
+              recognized institution known for its rigorous academics, pioneering research, and a deeply
+              embedded culture of innovation and open-source contribution.
+            </p>
+            <p className="about-section-desc">
+              With a legacy of nurturing some of India's finest technologists, IIITA is the natural home
+              for OOSC 4.0 — a place where open-source philosophy is not just taught but actively lived
+              through initiatives like OpenCode, numerous hackathons, and a thriving developer community.
+            </p>
+          </div>
+          <div className="about-institute-img-wrapper">
+            <img src="/about-college.png" alt="IIIT Allahabad campus aerial view" className="about-institute-img" width="600" height="400" loading="lazy" />
+          </div>
+        </div>
 
+        {/* Feature Cards */}
+        <div className="about-institute-grid">
+          <article className="about-institute-card">
+            <div className="institute-card-icon">
+              <GraduationCap size={28} />
+            </div>
+            <h3>Academic Excellence</h3>
+            <p>
+              Consistently ranked among India's top IT institutes, IIITA offers world-class
+              B.Tech, M.Tech, MBA and Ph.D. programs in IT, ECE, and allied disciplines. Its graduates
+              are sought by top global tech companies and research labs.
+            </p>
+          </article>
+          <article className="about-institute-card">
+            <div className="institute-card-icon">
+              <FlaskConical size={28} />
+            </div>
+            <h3>Innovation & Research</h3>
+            <p>
+              Home to 20+ specialized research centres spanning AI, NLP, cybersecurity, IoT, and
+              biomedical informatics. IIITA's faculty and students actively publish in top-tier venues
+              and collaborate with industry partners worldwide.
+            </p>
+          </article>
+          <article className="about-institute-card">
+            <div className="institute-card-icon">
+              <GitBranch size={28} />
+            </div>
+            <h3>Open Source Culture</h3>
+            <p>
+              Through programs like OpenCode, IIITA has cultivated 2,000+ open-source contributors.
+              Students regularly participate in GSoC, MLH, and maintain upstream projects across
+              the Linux, Mozilla, and CNCF ecosystems.
+            </p>
+          </article>
+        </div>
+
+        {/* Stats Banner */}
+        <div className="about-institute-banner">
+          <div className="about-institute-stat">
+            <span className="institute-stat-value">1999</span>
+            <span className="institute-stat-label">Established</span>
+          </div>
+          <div className="about-institute-stat">
+            <span className="institute-stat-value">3,000+</span>
+            <span className="institute-stat-label">Students</span>
+          </div>
+          <div className="about-institute-stat">
+            <span className="institute-stat-value">20+</span>
+            <span className="institute-stat-label">Research Labs</span>
+          </div>
+          <div className="about-institute-stat">
+            <span className="institute-stat-value">100+</span>
+            <span className="institute-stat-label">Faculty Members</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── SECTION: GDG ON CAMPUS — IIIT ALLAHABAD ─────────────────────────────── */}
+      <section className="about-gdg-section" id="gdg-iiita">
+        <div className="about-eyebrow" style={{ marginTop: '1.5rem' }}>Community Partner</div>
+        <h2 className="about-section-title">GDG On Campus — IIIT Allahabad</h2>
+
+        <div className="about-gdg-intro">
+          <div className="about-gdg-logo-showcase">
+            <img src="/gdglogo.png" alt="Google Developer Groups On Campus IIIT Allahabad logo" width="160" height="160" loading="lazy" />
+          </div>
+          <div className="about-gdg-text">
+            <p className="about-section-desc">
+              Google Developer Groups (GDG) On Campus at IIIT Allahabad is the premier student developer
+              community driving the open-source movement on campus. As one of the most active GDG chapters
+              in India, the group organizes technical workshops, study jams, codelabs, and speaker sessions
+              throughout the year, empowering students to build with Google technologies and contribute to
+              the global open-source ecosystem.
+            </p>
+            <p className="about-section-desc">
+              GDG IIITA plays a central role in organizing OOSC 4.0, bringing together its extensive
+              network of developers, mentors, and industry connections to deliver a conference experience
+              that inspires the next generation of open-source contributors.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature Cards */}
+        <div className="about-gdg-grid">
+          <article className="about-gdg-card">
+            <div className="gdg-card-icon">
+              <Rocket size={28} />
+            </div>
+            <h3>Developer Ecosystem</h3>
+            <p>
+              Organizing workshops, study jams, codelabs, and DevFest events that equip students
+              with hands-on experience in Android, Web, Cloud, ML, and emerging technologies
+              through Google's developer platforms.
+            </p>
+          </article>
+          <article className="about-gdg-card">
+            <div className="gdg-card-icon">
+              <Handshake size={28} />
+            </div>
+            <h3>Open Source Advocacy</h3>
+            <p>
+              Mentoring students through GSoC, GSoD, and contributing to upstream projects.
+              GDG IIITA champions open-source values by organizing contribution sprints, code
+              reviews, and community-driven development.
+            </p>
+          </article>
+          <article className="about-gdg-card">
+            <div className="gdg-card-icon">
+              <Sparkles size={28} />
+            </div>
+            <h3>Community Impact</h3>
+            <p>
+              With 500+ active members and a pan-India hackathon reach, GDG IIITA has built
+              one of the strongest developer communities in the country, bridging campus talent
+              with global tech opportunities.
+            </p>
+          </article>
+        </div>
+
+        {/* Highlight Banner */}
+        <div className="about-gdg-banner">
+          <div className="about-gdg-stat">
+            <span className="gdg-stat-value">500+</span>
+            <span className="gdg-stat-label">Active Members</span>
+          </div>
+          <div className="about-gdg-stat">
+            <span className="gdg-stat-value">50+</span>
+            <span className="gdg-stat-label">Events Per Year</span>
+          </div>
+          <div className="about-gdg-stat">
+            <span className="gdg-stat-value">30+</span>
+            <span className="gdg-stat-label">GSoC Selections</span>
+          </div>
+          <div className="about-gdg-stat">
+            <span className="gdg-stat-value">10+</span>
+            <span className="gdg-stat-label">Years Active</span>
+          </div>
+        </div>
+      </section>
 
       {/*
        ─── SECTION 5: PROVEN TRACK RECORD ──────────────────────────────────────── }
