@@ -251,7 +251,7 @@ function App() {
       'Design Team',
       'Hospitality & Logistics Team',
       'Sponsorship',
-      'Media',
+      'PR',
       'Filming',
     ],
     [],
@@ -298,7 +298,7 @@ function App() {
       'Hospitality & Logistics Team': [],
       'Hospitality': [],
       'Sponsorship': [],
-      'Media': [],
+      'PR': [],
       'Filming': [],
     }
 
