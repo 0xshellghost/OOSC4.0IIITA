@@ -1817,7 +1817,85 @@ body::after {
   white-space: pre-line;
 }
 
+/* Prizes */
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
 
+.prize-card {
+  padding: 28px 20px;
+  border-radius: var(--radius-card);
+  text-align: center;
+  border: 2px solid var(--color-border);
+  background: var(--color-panel-inset);
+  box-shadow: 4px 4px 0 var(--color-shadow-black);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.prize-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-border);
+}
+
+.prize-card.gold::before {
+  background: var(--color-accent);
+}
+
+.prize-card.silver::before {
+  background: var(--color-text-on-panel-sub);
+}
+
+.prize-card.bronze::before {
+  background: var(--color-text-on-panel-muted);
+}
+
+.prize-card:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--color-accent);
+  box-shadow: 6px 6px 0 var(--color-shadow-black);
+}
+
+.prize-medal {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+
+.prize-position {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-text-on-panel-muted);
+  margin-bottom: 8px;
+}
+
+.prize-amount {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--color-text-on-panel);
+}
+
+.prize-card.gold .prize-amount {
+  color: var(--color-accent);
+}
+
+.prize-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-on-panel-muted);
+  line-height: 1.5;
+}
 
 .special-prizes {
   display: flex;
