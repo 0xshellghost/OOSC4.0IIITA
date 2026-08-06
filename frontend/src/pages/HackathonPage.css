@@ -358,12 +358,12 @@
   box-shadow: 0 15px 40px rgba(0, 162, 237, 0.3);
 }
 .prize-card.gold .prize-medal {
-  border-color: var(--color-warning); /* Yellow circle */
-  color: var(--color-warning);
+  border-color: #FFD700; /* Brighter gold */
+  color: #FFD700;
 }
 .prize-card.gold .prize-position,
 .prize-card.gold .prize-amount {
-  color: var(--color-warning) !important;
+  color: #FFD700 !important;
   text-shadow: none;
 }
 .prize-card.gold p:not(.prize-position):not(.prize-amount) {
@@ -374,19 +374,22 @@
 
 /* 2nd Place */
 .prize-card.silver {
-  background: var(--color-panel);
-  border-color: rgba(255, 255, 255, 0.05);
+  background: var(--color-panel-surface);
+  border-color: var(--color-card-border);
 }
 .prize-card.silver:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-card-hover-border);
 }
 .prize-card.silver .prize-medal {
-  border-color: #cbd5e1; /* Silver/Light Grey */
-  color: #cbd5e1;
+  border-color: var(--color-brand-slate);
+  color: var(--color-brand-slate);
 }
-.prize-card.silver .prize-position,
+.prize-card.silver .prize-position {
+  color: var(--color-brand-slate) !important;
+  text-shadow: none;
+}
 .prize-card.silver .prize-amount {
-  color: #f8fafc !important;
+  color: var(--color-text-snow) !important;
   text-shadow: none;
 }
 .prize-card.silver p:not(.prize-position):not(.prize-amount) {
@@ -396,19 +399,22 @@
 
 /* 3rd Place */
 .prize-card.bronze {
-  background: var(--color-panel);
-  border-color: rgba(255, 255, 255, 0.05);
+  background: var(--color-panel-surface);
+  border-color: var(--color-card-border);
 }
 .prize-card.bronze:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-card-hover-border);
 }
 .prize-card.bronze .prize-medal {
-  border-color: #fb923c; /* Bronze/Orange */
-  color: #fb923c;
+  border-color: var(--color-warning);
+  color: var(--color-warning);
 }
-.prize-card.bronze .prize-position,
+.prize-card.bronze .prize-position {
+  color: var(--color-warning) !important;
+  text-shadow: none;
+}
 .prize-card.bronze .prize-amount {
-  color: #fb923c !important;
+  color: var(--color-text-snow) !important;
   text-shadow: none;
 }
 .prize-card.bronze p:not(.prize-position):not(.prize-amount) {
