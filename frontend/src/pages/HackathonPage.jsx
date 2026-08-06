@@ -96,7 +96,7 @@ export default function HackathonPage({
           </div>
           <h1>{siteConfig.hackathonTitle || 'Build the Future of Open Systems'}</h1>
           <p className="theme-label">Event Theme</p>
-          <p className="theme-name">"{siteConfig.hackathonTheme || 'AI × Open Source: Powering Intelligent Infrastructure'}"</p>
+          <p className="theme-name">"{siteConfig.hackathonTheme || 'To be released on 18 Aug'}"</p>
           {siteConfig.hackathonHidden !== 'true' && (
             <div className="hackathon-stat-strip">
               <div className="hstat"><span className="hstat-value">{siteConfig.hackathonPrizePool || '₹1,00,000+'}</span><span className="hstat-label">Prize Pool</span></div>
@@ -144,10 +144,8 @@ export default function HackathonPage({
           ) : (
             <>
               <p className="problem-statement-text">
-                Modern infrastructure increasingly relies on intelligent, adaptive systems. Yet most open-source tooling remains static, rule-based, and poorly suited for dynamic workloads.
+                To be released on 18 Aug. Stay tuned for exciting problem statements and challenges!
               </p>
-              <br />
-              <p className="problem-statement-text">Your challenge: design and prototype an AI-augmented open-source tool or platform across one of these tracks:</p>
               <br />
             </>
           )}
