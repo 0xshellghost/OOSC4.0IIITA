@@ -67,8 +67,8 @@ export default function Registration({ siteConfig = {}, registrationCards = [], 
           <div className="contact-info-panel">
             <div className="section-heading">
               <span>Ready to join?</span>
-              <h2>Registration Form</h2>
-              <p>Fill out the form to request your access key. Early applications are prioritized for the Hacker Pass.</p>
+              <h2>Get Your Pass</h2>
+              <p>Grab your access key for OOSC 4.0. We have partnered with KonfHub for a seamless ticketing experience.</p>
             </div>
 
             <div className="contact-details-cards">
@@ -98,37 +98,39 @@ export default function Registration({ siteConfig = {}, registrationCards = [], 
             </div>
           </div>
 
-          {/* Google Form Right Side */}
-          <div className="contact-form-panel glass-card registration-form-panel" style={{ display: 'flex', flexDirection: 'column' }}>
-            {siteConfig.registrationFormUrl ? (
-              <>
-                <div className="registration-form-header">
-                  <span className="registration-form-label">Official Registration</span>
-                  <a 
-                    href={siteConfig.registrationFormUrl}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn btn-admin-mini"
-                  >
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>Open in New Tab <ExternalLink size={16} color="var(--color-brand-blue)" /></span>
-                  </a>
+          {/* Ticket Booking Right Side */}
+          <div className="contact-form-panel glass-card registration-form-panel" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '60px 40px', textAlign: 'center' }}>
+            <h3 style={{ color: 'var(--color-accent)', marginBottom: '15px', fontSize: '2rem' }}>Official Ticketing Partner</h3>
+            <p style={{ color: 'var(--color-text-warm)', marginBottom: '30px', fontSize: '1.1rem', maxWidth: '400px' }}>
+              We have partnered with KonfHub to provide you with a smooth and secure registration experience. Grab your pass now!
+            </p>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%', maxWidth: '300px' }}>
+              <div style={{ position: 'relative' }}>
+                <div style={{ position: 'absolute', top: '-12px', right: '-10px', background: '#ff3366', color: 'white', fontSize: '0.8rem', padding: '4px 8px', borderRadius: '12px', fontWeight: 'bold', zIndex: 1, boxShadow: '0 2px 4px rgba(0,0,0,0.2)' }}>
+                  Coupon Applied: Early100
                 </div>
-                <iframe
-                  src={siteConfig.registrationFormUrl}
-                  width="100%"
-                  height="800"
-                  className="registration-form-iframe"
-                  title="OOSC 4.0 Registration Form"
+                <a 
+                  href="https://shorturl.at/NO4xb"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn"
+                  style={{ width: '100%', padding: '16px 20px', fontSize: '1.1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', borderRadius: '8px', textDecoration: 'none', background: 'var(--color-accent)', color: '#000', fontWeight: 'bold' }}
                 >
-                  Loading Google Form...
-                </iframe>
-              </>
-            ) : (
-              <div className="registration-soon" style={{ padding: '60px 40px', textAlign: 'center', margin: 'auto' }}>
-                <h3 style={{ color: 'var(--color-accent)', marginBottom: '16px' }}>Registration Opening Soon</h3>
-                <p style={{ color: 'var(--color-text-warm)' }}>We are currently finalizing the details. The registration form will be available here shortly.</p>
+                  Buy Early Bird Pass <ExternalLink size={20} />
+                </a>
               </div>
-            )}
+              
+              <a 
+                href="https://konfhub.com/oosc"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+                style={{ width: '100%', padding: '14px 20px', fontSize: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', borderRadius: '8px', textDecoration: 'none', border: '1px solid var(--color-accent)', color: 'var(--color-accent)' }}
+              >
+                Regular Pass <ExternalLink size={18} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
